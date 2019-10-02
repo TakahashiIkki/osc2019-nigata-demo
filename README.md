@@ -4,6 +4,17 @@
 
 これは [オープンソースカンファレンス 2019 Shimane](https://ospn.connpass.com/event/145108/) に使用するデモ用のレポジトリです。
 
+## 起動の方法
+
+```
+$ git clone git@github.com:TakahashiIkki/osc2019-nigata-demo.git
+
+$ cd osc2019-nigata-demo
+
+$ docker volume create --name test_db
+$ docker-compose up --build -d
+```
+
 ## デモ内容
 
 - テーブルにインデックスを貼ってSQLの高速化をしてみよう。
