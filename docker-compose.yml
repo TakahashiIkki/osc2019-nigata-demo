@@ -15,6 +15,13 @@ services:
       - ./postgres/work:/docker-entrypoint-initdb.d/
       - ./postgres/tmp:/opt/postgres
     container_name: osc_pgsql
+  web:
+    build: php
+    volumes:
+      - ./php/source:/var/www/html
+    ports:
+      - "8999:80"
+    container_name: osc_web
 
 volumes:
   test_db:
